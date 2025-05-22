@@ -108,8 +108,8 @@ You’ll see live charts showing temperature, humidity, and more.
 ---
 ### 📷 Dashboard Screenshots
 
-![Dashboard Screenshot 1](screenshot1.png)
-![Dashboard Screenshot 2](screenshot2.png)
+![Dashboard Screenshot 1](screenshot1.jpg)
+![Dashboard Screenshot 2](screenshot2.jpg)
 ---
 ## 🗺️ Roadmap
 
