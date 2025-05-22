@@ -1,0 +1,9 @@
+requests
+boto3
+snowflake-connector-python
+python-dotenv
+pandas
+streamlit
+
+
+
