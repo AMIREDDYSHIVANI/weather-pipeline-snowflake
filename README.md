@@ -1,6 +1,6 @@
 # weather-pipeline-snowflake
 "Real-time weather data ingestion pipeline using OpenWeather API, AWS S3, Snowflake, and Streamlit."
-# 🌤 Real-Time Weather Data Pipeline
+# Real-Time Weather Data Pipeline
 
 A student-built project that shows how to fetch, store, and visualize real-time weather data using:
 
@@ -9,13 +9,13 @@ A student-built project that shows how to fetch, store, and visualize real-time 
 - Snowflake
 - Streamlit
 
-[📚 Explore the docs »](#about-the-project) ·  
-[🐛 Report Bug](https://github.com/AMIREDDYSHIVANI/weather-pipeline-snowflake/issues) ·  
-[✨ Request Feature](https://github.com/AMIREDDYSHIVANI/weather-pipeline-snowflake/issues)
+[ Explore the docs »](#about-the-project) ·  
+[Report Bug](https://github.com/AMIREDDYSHIVANI/weather-pipeline-snowflake/issues) ·  
+[ Request Feature](https://github.com/AMIREDDYSHIVANI/weather-pipeline-snowflake/issues)
 
 ---
 
-## 📚 Table of Contents
+##  Table of Contents
 
 - [About The Project](#about-the-project)
 - [Built With](#built-with)
@@ -29,7 +29,7 @@ A student-built project that shows how to fetch, store, and visualize real-time 
 
 ---
 
-## 📌 About The Project
+## About The Project
 
 This project helps you understand real-time cloud data pipelines. It does four main things:
 
@@ -40,7 +40,7 @@ This project helps you understand real-time cloud data pipelines. It does four m
 
 ---
 
-## 🛠️ Built With
+## Built With
 
 - [Python](https://www.python.org/)
 - [AWS S3](https://aws.amazon.com/s3/)
@@ -50,9 +50,9 @@ This project helps you understand real-time cloud data pipelines. It does four m
 
 ---
 
-## 🧰 Getting Started
+##  Getting Started
 
-### 📋 Prerequisites
+###  Prerequisites
 
 You’ll need Python installed. Then, install required packages:
 
@@ -64,7 +64,7 @@ Also, copy `.env.example` to `.env` and fill in your API keys.
 
 ---
 
-### 🔧 Installation
+### Installation
 
 Clone the project to your computer:
 
@@ -89,7 +89,7 @@ AWS_ACCESS_KEY=your_aws_key
 
 ---
 
-## 🚀 Usage
+## Usage
 
 To collect and upload data:
 
@@ -106,12 +106,12 @@ streamlit run app.py
 You’ll see live charts showing temperature, humidity, and more.
 
 ---
-### 📷 Dashboard Screenshots
+### Dashboard Screenshots
 
 ![Dashboard Screenshot 1](screenshot1.jpg)
 ![Dashboard Screenshot 2](screenshot2.jpg)
 ---
-## 🗺️ Roadmap
+## Roadmap
 
 * ✅ Python automation
 * ✅ AWS S3 storage
@@ -123,7 +123,7 @@ Check [Issues](https://github.com/AMIREDDYSHIVANI/weather-pipeline-snowflake/iss
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Want to improve it? Awesome!
 
@@ -138,13 +138,13 @@ Want to improve it? Awesome!
 
 ---
 
-## 📜 License
+## License
 
 This project is licensed under the **MIT License**. See the `LICENSE` file for details.
 
 ---
 
-## 📬 Contact
+## Contact
 
 **Shivani Reddy**
 📎 [LinkedIn](www.linkedin.com/in/shivani-343a32331)
@@ -162,10 +162,5 @@ Thanks to the following for inspiration and tools:
 * [Boto3 Docs](https://boto3.amazonaws.com/)
 * [Best README Template](https://github.com/othneildrew/Best-README-Template)
 
-```
 
----
-
-Let me know if you'd like this turned into a downloadable `README.md` file or want help uploading it to your GitHub repo!
-```
 
