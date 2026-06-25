@@ -6,6 +6,7 @@
   <img src="https://img.shields.io/badge/Snowflake-29B5E8?style=for-the-badge&logo=snowflake&logoColor=white"/>
   <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white"/>
   <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge"/>
+    <img src="https://github.com/AMIREDDYSHIVANI/weather-pipeline-snowflake/actions/workflows/ci.yml/badge.svg" alt="CI" />
 </p>
 
 <p align="center">
