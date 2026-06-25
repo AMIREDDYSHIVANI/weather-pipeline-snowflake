@@ -1,166 +1,164 @@
-# weather-pipeline-snowflake
-"Real-time weather data ingestion pipeline using OpenWeather API, AWS S3, Snowflake, and Streamlit."
-# Real-Time Weather Data Pipeline
+<h1 align="center">🌦️ Real-Time Weather Data Pipeline</h1>
 
-A student-built project that shows how to fetch, store, and visualize real-time weather data using:
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54"/>
+  <img src="https://img.shields.io/badge/AWS_S3-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Snowflake-29B5E8?style=for-the-badge&logo=snowflake&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white"/>
+  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge"/>
+</p>
 
-- Python
-- AWS S3
-- Snowflake
-- Streamlit
-
-[ Explore the docs »](#about-the-project) ·  
-[Report Bug](https://github.com/AMIREDDYSHIVANI/weather-pipeline-snowflake/issues) ·  
-[ Request Feature](https://github.com/AMIREDDYSHIVANI/weather-pipeline-snowflake/issues)
-
----
-
-##  Table of Contents
-
-- [About The Project](#about-the-project)
-- [Built With](#built-with)
-- [Getting Started](#getting-started)
-- [Usage](#usage)
-- [Roadmap](#roadmap)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
-- [Acknowledgments](#acknowledgments)
+<p align="center">
+  A production-style end-to-end cloud data pipeline that ingests real-time weather data from the OpenWeatherMap API, stores it in AWS S3, loads it into Snowflake via Snowpipe, and visualizes it on an interactive Streamlit dashboard.
+</p>
 
 ---
 
-## About The Project
+## 🏗️ Architecture
 
-This project helps you understand real-time cloud data pipelines. It does four main things:
+```
+OpenWeatherMap API
+        │
+        ▼
+  Python Script (weathermain.py)
+        │
+        ▼
+   AWS S3 Bucket (raw JSON)
+        │
+        ▼
+  Snowpipe (auto-ingest)
+        │
+        ▼
+  Snowflake Data Warehouse
+        │
+        ▼
+  Streamlit Dashboard (weatherapp.py)
+```
 
-1. Collects weather data using the OpenWeatherMap API  
-2. Stores data in AWS S3 as JSON files  
-3. Loads that data into Snowflake using Snowpipe  
-4. Displays temperature and humidity on a web dashboard using Streamlit
+---
+
+## ✨ Features
+
+- 🌐 **Live weather ingestion** — fetches temperature, humidity, wind speed & conditions from OpenWeatherMap API
+- ☁️ **AWS S3 storage** — raw JSON payloads stored in S3 with timestamped file naming
+- ❄️ **Snowpipe auto-ingest** — automated, event-driven data loading into Snowflake tables
+- 📊 **Interactive dashboard** — real-time charts for temperature and humidity trends via Streamlit
+- 🔐 **Secure config** — all credentials managed via `.env` (never committed to version control)
 
 ---
 
-## Built With
+## 🛠️ Tech Stack
 
-- [Python](https://www.python.org/)
-- [AWS S3](https://aws.amazon.com/s3/)
-- [Snowflake](https://www.snowflake.com/)
-- [Streamlit](https://streamlit.io/)
-- [OpenWeatherMap API](https://openweathermap.org/api)
+| Layer | Technology |
+|-------|-----------|
+| Data Ingestion | Python, OpenWeatherMap API |
+| Cloud Storage | AWS S3 |
+| Data Warehouse | Snowflake + Snowpipe |
+| Visualization | Streamlit |
+| Config Management | python-dotenv |
+
+---
+
+## 📸 Dashboard Screenshots
+
+![Dashboard Screenshot 1](screenshot1.jpg)
+![Dashboard Screenshot 2](screenshot2.jpg)
 
 ---
 
-##  Getting Started
+## 🚀 Getting Started
 
-###  Prerequisites
+### Prerequisites
 
-You’ll need Python installed. Then, install required packages:
-
-```bash
-pip install -r requirements.txt
-````
-
-Also, copy `.env.example` to `.env` and fill in your API keys.
-
----
+- Python 3.10+
+- AWS account with S3 bucket configured
+- Snowflake account with Snowpipe set up
+- OpenWeatherMap API key (free tier works)
 
 ### Installation
 
-Clone the project to your computer:
+1. **Clone the repository**
 
 ```bash
 git clone https://github.com/AMIREDDYSHIVANI/weather-pipeline-snowflake.git
 cd weather-pipeline-snowflake
 ```
 
-Install dependencies:
+2. **Install dependencies**
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Add your keys to the `.env` file:
+3. **Configure environment variables**
 
+```bash
+cp .env.example .env
 ```
+
+Edit `.env` with your credentials:
+
+```env
 OWM_API_KEY=your_openweather_api_key
-AWS_ACCESS_KEY=your_aws_key
-...
+AWS_ACCESS_KEY=your_aws_access_key
+AWS_SECRET_KEY=your_aws_secret_key
+AWS_BUCKET_NAME=your_s3_bucket_name
+SNOWFLAKE_ACCOUNT=your_snowflake_account
+SNOWFLAKE_USER=your_username
+SNOWFLAKE_PASSWORD=your_password
 ```
 
 ---
 
-## Usage
+## ▶️ Usage
 
-To collect and upload data:
+**Run the data ingestion pipeline:**
 
 ```bash
-python main.py
+python weathermain.py
 ```
 
-To see the weather dashboard:
+**Launch the Streamlit dashboard:**
 
 ```bash
-streamlit run app.py
+streamlit run weatherapp.py
 ```
 
-You’ll see live charts showing temperature, humidity, and more.
-
 ---
-### Dashboard Screenshots
 
-![Dashboard Screenshot 1](screenshot1.jpg)
-![Dashboard Screenshot 2](screenshot2.jpg)
----
-## Roadmap
+## 🗺️ Roadmap
 
-* ✅ Python automation
-* ✅ AWS S3 storage
-* ✅ Snowflake ingestion via Snowpipe
-* ✅ Streamlit dashboard
-* 🔜 Power BI integration (coming soon)
-
-Check [Issues](https://github.com/AMIREDDYSHIVANI/weather-pipeline-snowflake/issues) for features in progress.
+- [x] OpenWeatherMap API ingestion
+- [x] AWS S3 raw storage
+- [x] Snowflake ingestion via Snowpipe
+- [x] Streamlit visualization dashboard
+- [ ] Power BI integration
+- [ ] Multi-city support
+- [ ] Automated scheduling with Apache Airflow
 
 ---
 
-## Contributing
+## 🤝 Contributing
 
-Want to improve it? Awesome!
+Contributions are welcome!
 
-1. Fork the project
-2. Create a new branch:
-   `git checkout -b feature/YourFeatureName`
-3. Make your changes and commit:
-   `git commit -m 'Add your feature'`
-4. Push to GitHub:
-   `git push origin feature/YourFeatureName`
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/YourFeature`
+3. Commit your changes: `git commit -m 'Add YourFeature'`
+4. Push to branch: `git push origin feature/YourFeature`
 5. Open a Pull Request
 
 ---
 
-## License
+## 📄 License
 
-This project is licensed under the **MIT License**. See the `LICENSE` file for details.
-
----
-
-## Contact
-
-**Shivani Reddy**
-📎 [LinkedIn](www.linkedin.com/in/shivani-343a32331)
-🔗 [GitHub Repo](https://github.com/AMIREDDYSHIVANI/weather-pipeline-snowflake)
+Distributed under the MIT License. See `LICENSE` for details.
 
 ---
 
-## 🙏 Acknowledgments
+## 👩‍💻 Author
 
-Thanks to the following for inspiration and tools:
+**Shivani Amireddy**
 
-* [OpenWeatherMap](https://openweathermap.org/)
-* [Streamlit Docs](https://docs.streamlit.io/)
-* [Snowflake Docs](https://docs.snowflake.com/)
-* [Boto3 Docs](https://boto3.amazonaws.com/)
-* [Best README Template](https://github.com/othneildrew/Best-README-Template)
-
-
-
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/shivani-reddy-458600400)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=flat&logo=github&logoColor=white)](https://github.com/AMIREDDYSHIVANI)
